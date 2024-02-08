@@ -9,9 +9,10 @@ public class NewTest {
 
     @Test
     void successfulSearchTest() {
-            open("https://www.google.com/");
-            $("[name=q]").setValue("selenide").pressEnter();
-            Configuration.timeout = 50000;  // без timeout не успевает прогрузиться страница
-            $("[id=search]").shouldHave(text("https://ru.selenide.org"));
-        }
+        Configuration.holdBrowserOpen = true;
+        open("https://www.google.com/");
+        $("[name=q]").setValue("selenide").pressEnter();
+        Configuration.timeout = 50000;  // без timeout не успевает прогрузиться страница
+        $("[id=search]").shouldHave(text("https://ru.selenide.org"));
+    }
 }
