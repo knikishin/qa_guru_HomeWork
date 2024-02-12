@@ -9,7 +9,7 @@ public class NewTest {
 
     @Test
     void successfulSearchTest() {
-        Configuration.timeout = 50000;
+        Configuration.holdBrowserOpen = true;
         open("https://www.google.com/");
         $("[name=q]").setValue("selenide").pressEnter();
         Configuration.timeout = 50000;  // без timeout не успевает прогрузиться страница
