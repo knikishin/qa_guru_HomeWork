@@ -16,8 +16,6 @@ public class DemoQATests {
         browserSize = "1920x1080";
         holdBrowserOpen = true;
         pageLoadStrategy = "none";
-        //timeout = 3000;
-
     }
 
     @Test
