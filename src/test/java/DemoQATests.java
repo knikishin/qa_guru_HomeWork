@@ -14,7 +14,7 @@ public class DemoQATests {
     static void beforeALL() {
         baseUrl = "https://demoqa.com";
         browserSize = "1920x1080";
-        //holdBrowserOpen = true;
+        holdBrowserOpen = true;
         pageLoadStrategy = "none";
     }
 
